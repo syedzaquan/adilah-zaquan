@@ -14,7 +14,7 @@ html {
 
 body {
   padding: 0;
-  font-family: TheSeasons, Arial, Helvetica, sans-serif;
+  font-family: SrabenGrotesk, Arial, Helvetica, sans-serif;
   // background-color: #e9d6b6;
   // background-image: url('../images/paper.png');
   background-size: 100px;
@@ -28,20 +28,25 @@ section {
 
 hr {
   max-width: 100px;
-  margin: 30px auto;
+  margin: 50px auto;
 
   color: inherit;
   border: 0;
   border-top: 1px #395b76 solid;
   opacity: .25;
-
-  &.big {
-    margin: 70px auto;
-  }
 }
 
 .sans-serif-text {
   font-family: Verona, Arial, Helvetica, sans-serif;
+}
+
+.frame-title,
+.day,
+.date,
+.year,
+.venue,
+.state {
+  font-weight: 400;
 }
 
 .reveal {
@@ -115,6 +120,7 @@ a[href^="mailto"] {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    // background-color: #F8F7F3;
 
     .main {
       // padding: 40px;
@@ -257,4 +263,17 @@ a[href^="mailto"] {
       right: -2px;
     }
   }
+}
+
+.fade-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  /* Initial position, adjust as needed */
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-scroll.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  /* Final position, adjust as needed */
 }
