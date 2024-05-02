@@ -40,12 +40,7 @@ hr {
   font-family: Verona, Arial, Helvetica, sans-serif;
 }
 
-.frame-title,
-.day,
-.date,
-.year,
-.venue,
-.state {
+.frame-title, .day, .date, .year, .venue, .state {
   font-weight: 400;
 }
 
@@ -263,17 +258,4 @@ a[href^="mailto"] {
       right: -2px;
     }
   }
-}
-
-.fade-scroll {
-  opacity: 0;
-  transform: translateY(50px);
-  /* Initial position, adjust as needed */
-  transition: opacity 0.5s, transform 0.5s;
-}
-
-.fade-scroll.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-  /* Final position, adjust as needed */
 }
