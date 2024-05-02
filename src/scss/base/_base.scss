@@ -29,6 +29,15 @@ section {
 hr {
   max-width: 100px;
   margin: 30px auto;
+
+  color: inherit;
+  border: 0;
+  border-top: 1px #395b76 solid;
+  opacity: .25;
+
+  &.big {
+    margin: 70px auto;
+  }
 }
 
 .sans-serif-text {
