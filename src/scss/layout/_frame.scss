@@ -81,6 +81,14 @@
                         // padding: 20px 0;
                         // text-indent: -25px;
                         letter-spacing: 0;
+
+                        &.syed {
+                            text-align: left;
+                        }
+
+                        &.adilah {
+                            text-align: right;
+                        }
                     }
                 }
 
