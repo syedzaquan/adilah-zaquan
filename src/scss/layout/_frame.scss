@@ -1,0 +1,132 @@
+.welcome {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    // padding: 40px 0px;
+    overflow-x: hidden;
+    // background-image: url('../images/rattan.webp');
+    // margin: 40px 0;
+
+    .arch {
+        width: 110%;
+        max-width: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.top {
+            top: 0;
+        }
+
+        &.bottom {
+            bottom: 0;
+        }
+    }
+
+    .floral {
+        position: absolute;
+        width: 35%;
+
+        &.peony-1 {
+            top: 0;
+            right: -10px;
+        }
+
+        &.peony-2 {
+            top: 0;
+            left: -10px;
+            transform: rotate(30deg);
+        }
+    }
+
+    .welcome-wrapper {
+        // background-color: #F7F6F2;
+        width: 100%;
+        padding: 40px 10px;
+
+        // border-top-right-radius: 500px;
+        // border-top-left-radius: 500px;
+        // border-bottom-left-radius: 80px;
+        // border-bottom-right-radius: 80px;
+        // box-shadow: 0 2px 25px rgba(0, 0, 0, .05);
+        overflow: hidden;
+
+        div {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .frame {
+            text-align: center;
+            position: relative;
+            // background-image: url('../images/rattan.webp');
+            background-size: cover;
+
+            .frame-wrapper {
+                padding: 40px 10px;
+
+                h1,
+                p {
+                    letter-spacing: 2px;
+                }
+
+                .calligraphy-text {
+                    font-family: BrownSugar, Arial, Helvetica, sans-serif;
+
+                    &.name {
+                        font-size: 60px;
+                        line-height: 68px;
+                        margin-bottom: 0;
+                        // padding: 20px 0;
+                        // text-indent: -25px;
+                        letter-spacing: 0;
+                    }
+                }
+
+                .ampersand {
+                    font-family: Hajime, Arial, Helvetica, sans-serif;
+                }
+
+                .venue-date {
+                    
+
+                    .day,
+                    .date,
+                    .year,
+                    .venue,
+                    .state {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+
+                    .day,
+                    .year,
+                    .venue {
+                        font-size: 14px;
+                        line-height: 21px;
+                        // letter-spacing: 10px;
+                        font-weight: 600;
+                        margin: 0;
+                    }
+
+                    
+                }
+
+                .frame-title,
+                    .date,
+                    .state {
+                        font-size: 20px;
+                        line-height: 27px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+            }
+
+            .rumah-dusun {
+                opacity: 0.9;
+                mix-blend-mode: darken;
+            }
+        }
+    }
+}

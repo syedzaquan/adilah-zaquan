@@ -1,0 +1,52 @@
+.details {
+    font-family: Cooper, Arial, Helvetica, sans-serif;
+    letter-spacing: 0px;
+
+    .salam,
+    .words {
+        // font-family: Gotham, Arial, Arial, Helvetica, sans-serif;
+    }
+
+    .salam, .parents, .groom-bride, {
+        margin-bottom: 45px;
+    }
+
+    .salam {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 27px;
+        text-transform: uppercase;
+    }
+
+    .parents,
+    .groom-bride {
+
+        p {
+            font-size: 26px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            line-height: 34px;
+            margin-bottom: 0;
+            text-indent: -5px;
+            font-family: AwesomeSerifItalic, Arial, Helvetica, sans-serif;
+        }
+    }
+
+    .words {
+        p {
+            margin-bottom: 30px;
+        }
+    }
+
+    .wedding-details {
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
