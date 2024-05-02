@@ -109,6 +109,7 @@ a[href^="mailto"] {
     position: relative;
     background-color: rgb(253 250 245 / 80%);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
