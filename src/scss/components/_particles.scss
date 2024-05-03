@@ -1,0 +1,26 @@
+#canvas-wrap {
+	width: 100%;
+	height: 100%;
+    position: relative;
+}
+#canvas-txt {
+	font-size: 40px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+@supports (-webkit-background-clip: text) {
+	#canvas-txt p {
+		background: -webkit-linear-gradient(left, #ba65fd, #5aa5f8, #00d8ee);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
