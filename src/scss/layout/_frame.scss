@@ -76,17 +76,18 @@
                 }
 
                 .calligraphy-text {
-                    font-family: YoungGallant, Arial, Helvetica, sans-serif;
+                    font-family: Sackers, Arial, Helvetica, sans-serif;
 
                     &.name {
                         font-size: 80px;
                         letter-spacing: 0;
-                        line-height: 30px;
+                        line-height: 82px;
                         margin-bottom: 0;
-                        padding-bottom: 48px;
+                        text-indent: -25px;
 
                         &.zaquan {
                             // text-align: left;
+                            margin-top: -18px;
                         }
 
                         &.adilah {
@@ -121,12 +122,11 @@
                     }
 
                     .venue {
-                        font-family: YoungGallant, Arial, Helvetica, sans-serif;
-                        font-size: 30px;
-                        font-weight: 600;
-                        line-height: 20px;
+                        font-family: PalaceScript, Arial, Helvetica, sans-serif;
+                        font-size: 34px;
+                        line-height: 36px;
                         margin: 0;
-                        padding-bottom: 12px;
+                        padding-bottom: 0;
                     }
 
                     .day,
@@ -199,6 +199,14 @@
             font-weight: 600;
             line-height: 45px;
             color: #b78846;
+        }
+
+        .month, .year {
+            font-weight: 600;
+        }
+
+        .year {
+            letter-spacing: 3px;
         }
 
         .month,

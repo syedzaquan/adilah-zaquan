@@ -20,6 +20,7 @@ body {
   background-size: 100px;
   background-repeat: repeat;
   color: #395b76;
+  background-color: #F8F7F3;
 }
 
 section {
@@ -98,6 +99,10 @@ a[href^="mailto"] {
   background-image: url("../images/tropical.webp");
   background-size: cover;
 
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
   .main-content-wrapper,
   .main {
     border-top-left-radius: 500px;
@@ -107,14 +112,14 @@ a[href^="mailto"] {
   .main-content-wrapper {
     // padding: 10px;
     position: relative;
-    background-color: rgb(253 250 245 / 80%);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    background-color: rgb(253 250 245 / 93%);
+    // backdrop-filter: blur(5px);
+    // -webkit-backdrop-filter: blur(5px);
+    // -webkit-backface-visibility: hidden;
+    // -moz-backface-visibility: hidden;
+    // -webkit-transform: translate3d(0, 0, 0);
+    // -moz-transform: translate3d(0, 0, 0);
+    // transform: translate3d(0, 0, 0);
     // background-color: #F8F7F3;
 
     .main {

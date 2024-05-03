@@ -1,0 +1,29 @@
+.dua {
+    .dua-wrapper {
+        padding: 6px;
+
+        // border: 6px solid #F0CA97;
+        background: linear-gradient(60deg, rgba(239,201,152,1) 0%, rgba(249,221,175,1) 50%, rgba(243,188,119,1) 100%);
+
+        .dua-container {
+            background-image: url("../images/tropical.webp");
+            background-size: cover;
+            padding: 30px 35px;
+
+            .dua-frame {
+                background-color: #F8F7F3;
+                padding: 20px 10px;
+                border: 4px solid #F0CA97;
+                box-shadow: 0 0 20px 0px #273540;
+
+                p {
+                    font-family: ElegantGaramondBT, Arial, Helvetica, sans-serif;
+                    margin: 0;
+                }
+            }
+        }
+
+
+    }
+
+}
