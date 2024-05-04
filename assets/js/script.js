@@ -1,2 +1,2 @@
-
+var countDownDate=new Date("August 9, 2024 00:00:00").getTime(),x=setInterval((function(){var e=(new Date).getTime(),n=countDownDate-e,t=Math.floor(n/864e5),o=Math.floor(n%864e5/36e5),r=Math.floor(n%36e5/6e4),a=Math.floor(n%6e4/1e3);document.getElementById("days").innerHTML=t,document.getElementById("hours").innerHTML=o,document.getElementById("minutes").innerHTML=r,document.getElementById("seconds").innerHTML=a,n<0&&(clearInterval(x),document.getElementById("countdown").innerHTML="EXPIRED")}),1e3);
 //# sourceMappingURL=script.js.map

@@ -72,7 +72,12 @@
 
 @include font-face('GraciaASW03-No55', 'GraciaASW03-No55', 500);
 
+@include font-face('DarshyeScript', 'DarshyeScript', 500);
+
 @include font-face('SrabenGrotesk-Medium', 'SrabenGrotesk', 400);
 @include font-face('SrabenGrotesk-SemiBold', 'SrabenGrotesk', 500);
 @include font-face('SrabenGrotesk-Bold', 'SrabenGrotesk', 600);
 @include font-face('SrabenGrotesk-ExtraBold', 'SrabenGrotesk', 700);
+
+@include font-face('MiltonTwo', 'MiltonTwo', 500);
+@include font-face('MiltonTwoBold', 'MiltonTwo', 600);

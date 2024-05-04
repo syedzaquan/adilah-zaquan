@@ -76,18 +76,19 @@
                 }
 
                 .calligraphy-text {
-                    font-family: Sackers, Arial, Helvetica, sans-serif;
+                    font-family: MiltonTwo, Arial, Helvetica, sans-serif;
 
                     &.name {
-                        font-size: 80px;
+                        font-size: 100px;
+                        font-weight: 600;
                         letter-spacing: 0;
-                        line-height: 82px;
+                        line-height: 90px;
                         margin-bottom: 0;
-                        text-indent: -25px;
+                        text-indent: -10px;
 
                         &.zaquan {
                             // text-align: left;
-                            margin-top: -18px;
+                            // margin-top: -18px;
                         }
 
                         &.adilah {
@@ -201,7 +202,8 @@
             color: #b78846;
         }
 
-        .month, .year {
+        .month,
+        .year {
             font-weight: 600;
         }
 
