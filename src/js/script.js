@@ -21,3 +21,34 @@ var x = setInterval(function () {
         document.getElementById("countdown").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+// Popup
+document.addEventListener("DOMContentLoaded", function () {
+    const navItems = document.querySelectorAll('.nav-item a');
+    const overlay = document.getElementById('overlay');
+
+    navItems.forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            const target = this.getAttribute('data-target');
+            const popup = document.getElementById(target);
+            if (popup) {
+                if (popup.classList.contains('show')) {
+                    popup.classList.remove('show');
+                    overlay.classList.remove('show');
+                } else {
+                    closeAllPopups();
+                    popup.classList.add('show');
+                    overlay.classList.add('show');
+                }
+            }
+        });
+    });
+
+    function closeAllPopups() {
+        document.querySelectorAll('.popup').forEach(popup => {
+            popup.classList.remove('show');
+        });
+        overlay.classList.remove('show');
+    }
+});

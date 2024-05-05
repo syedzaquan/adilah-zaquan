@@ -11,9 +11,14 @@
     }
 
     ul {
+        list-style-type: none;
+        padding: 0;
+
         li {
             font-size: 16px;
             color: #395b76;
+            display: inline-block;
+            margin: 0 20px;
 
             span {
                 display: block;
@@ -23,14 +28,4 @@
             }
         }
     }
-}
-
-#countdown ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#countdown ul li {
-    display: inline-block;
-    margin: 0 10px;
 }

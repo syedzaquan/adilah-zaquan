@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
@@ -20,7 +21,7 @@
         <source src="https://www.kahwinnow.com/storage/music/DU3DX3V6TwSmDSD3TR2E6BgFUDM3Rgss8etiVGUx.mp3" type="audio/mpeg">
     </audio> -->
 
-    <div class="main-content">
+    <div id="main" class="main-content">
         <div class="main-content-wrapper">
             <div class="main">
                 <!-- <div class="box box-top"></div>
@@ -79,7 +80,7 @@
         <!-- <img src="assets/images/rope.png" alt="rope" class="img-fluid"> -->
     </div>
 
-    <section class="container details">
+    <div id="details" class="container details">
         <div class="row">
             <div class="col-12 text-center">
                 <img src="assets/images/decoration.png" class="decorations img-fluid" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">
@@ -115,7 +116,7 @@
             </div>
         </div>
 
-    </section>
+    </div>
 
     <div id="countdown" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">
         <h3>Menanti Hari</h3>
@@ -143,6 +144,88 @@
             </div>
         </div>
     </div>
+
+    <nav class="footer-nav">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#" data-target="hubungi">
+                    <i class="fa-light fa-phone"></i>
+                    <span>Hubungi</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" data-target="lokasi">
+                    <i class="fa-light fa-location-dot"></i>
+                    <span>Lokasi</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="popup" id="hubungi">
+        <div class="popup-wrapper">
+            <h3 class="popup-heading">Hubungi</h3>
+            <div class="contact-popup">
+                <div class="contact-list">
+                    <div class="contact-name">Kak Yah</div>
+                    <div class="contact-number">
+                        <a href="#">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-list">
+                    <div class="contact-name">Abe Di</div>
+                    <div class="contact-number">
+                        <a href="#">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-list">
+                    <div class="contact-name">Abang Is</div>
+                    <div class="contact-number">
+                        <a href="#">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="lokasi">
+        <div class="popup-wrapper">
+            <h3 class="popup-heading">Lokasi/Tempat</h3>
+            <div class="location-popup">
+                <p class="location-address">
+                    Lot 202, Kampung Banggol Setol, 16800 Pasir Puteh, Kelantan
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35639.05370223055!2d102.28506636967612!3d5.876916228632834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b697e2f86eb3a9%3A0x393dbb4b19cac4ea!2sRumah%20Dusun!5e0!3m2!1sen!2smy!4v1714923546960!5m2!1sen!2smy" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location-waze-gmap">
+                    <a href="https://ul.waze.com/ul?preview_venue_id=67043387.670433867.14050999&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" class="waze">
+                        <i class="fa-brands fa-waze"></i>
+                        <span>Waze</span>
+                    </a>
+                    <a href="https://maps.app.goo.gl/SwRVW1Johpw8RhF39" class="google-map">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>Google Maps</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
