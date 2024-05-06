@@ -256,6 +256,9 @@ $("#tsparticles")
     .init({
         detectRetina: true,
         fpsLimit: 60,
+        fullScreen: {
+            enable: true
+        },
         interactivity: {
             detectsOn: "canvas",
             events: {
