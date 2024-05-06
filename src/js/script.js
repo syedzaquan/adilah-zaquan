@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
             disable: false
         });
 
-        initParticles();
+        // initParticles();
 
         setTimeout(function () {
             if (audio.paused) {
@@ -135,131 +135,228 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(mainSection);
 });
 
-function initParticles() {
-    particlesJS("particles-js", {
-        particles: {
-            number: {
-                value: 52,
-                density: {
-                    enable: true,
-                    value_area: 631.3280775270874
-                }
-            },
-            color: {
-                value: "#000"
-            },
-            shape: {
-                type: "image",
-                stroke: {
-                    width: 0,
-                    color: "#000000"
-                },
-                polygon: {
-                    nb_sides: 5
-                },
-                image: {
-                    src: "https://png.pngtree.com/png-clipart/20230428/ourmid/pngtree-free-vector-big-green-leaf-of-tropical-monstera-plant-isolated-on-png-image_6743001.png",
-                    width: 100,
-                    height: 100
-                }
-            },
-            opacity: {
-                value: 0.5,
-                random: true,
-                anim: {
-                    enable: false,
-                    speed: 1,
-                    opacity_min: 0.1,
-                    sync: false
-                }
-            },
-            size: {
-                value: 5,
-                random: true,
-                anim: {
-                    enable: false,
-                    speed: 40,
-                    size_min: 0.1,
-                    sync: false
-                }
-            },
-            line_linked: {
-                enable: false,
-                distance: 500,
-                color: "#ffffff",
-                opacity: 0.4,
-                width: 2
-            },
-            move: {
-                enable: true,
-                speed: 1.5,
-                direction: "bottom",
-                random: false,
-                straight: false,
-                out_mode: "out",
-                bounce: false,
-                attract: {
-                    enable: false,
-                    rotateX: 600,
-                    rotateY: 1200
-                }
-            },
-            rotate: {
-                random: true,
-                speed: 0.5
-            }
-        },
+// function initParticles() {
+//     particlesJS("particles-js", {
+//         particles: {
+//             number: {
+//                 value: 52,
+//                 density: {
+//                     enable: true,
+//                     value_area: 631.3280775270874
+//                 }
+//             },
+//             color: {
+//                 value: "#000"
+//             },
+//             shape: {
+//                 type: "image",
+//                 stroke: {
+//                     width: 0,
+//                     color: "#000000"
+//                 },
+//                 polygon: {
+//                     nb_sides: 5
+//                 },
+//                 image: {
+//                     src: "https://png.pngtree.com/png-clipart/20230428/ourmid/pngtree-free-vector-big-green-leaf-of-tropical-monstera-plant-isolated-on-png-image_6743001.png",
+//                     width: 100,
+//                     height: 100
+//                 }
+//             },
+//             opacity: {
+//                 value: 0.5,
+//                 random: true,
+//                 anim: {
+//                     enable: false,
+//                     speed: 1,
+//                     opacity_min: 0.1,
+//                     sync: false
+//                 }
+//             },
+//             size: {
+//                 value: 5,
+//                 random: true,
+//                 anim: {
+//                     enable: false,
+//                     speed: 40,
+//                     size_min: 0.1,
+//                     sync: false
+//                 }
+//             },
+//             line_linked: {
+//                 enable: false,
+//                 distance: 500,
+//                 color: "#ffffff",
+//                 opacity: 0.4,
+//                 width: 2
+//             },
+//             move: {
+//                 enable: true,
+//                 speed: 1.5,
+//                 direction: "bottom",
+//                 random: false,
+//                 straight: false,
+//                 out_mode: "out",
+//                 bounce: false,
+//                 attract: {
+//                     enable: false,
+//                     rotateX: 600,
+//                     rotateY: 1200
+//                 }
+//             },
+//             rotate: {
+//                 random: true,
+//                 speed: 0.5
+//             }
+//         },
+//         interactivity: {
+//             detect_on: "canvas",
+//             events: {
+//                 onhover: {
+//                     enable: false,
+//                     mode: "bubble"
+//                 },
+//                 onclick: {
+//                     enable: true,
+//                     mode: "repulse"
+//                 },
+//                 resize: true
+//             },
+//             modes: {
+//                 grab: {
+//                     distance: 400,
+//                     line_linked: {
+//                         opacity: 0.5
+//                     }
+//                 },
+//                 bubble: {
+//                     distance: 400,
+//                     size: 4,
+//                     duration: 0.3,
+//                     opacity: 1,
+//                     speed: 3
+//                 },
+//                 repulse: {
+//                     distance: 200,
+//                     duration: 0.4
+//                 },
+//                 push: {
+//                     particles_nb: 4
+//                 },
+//                 remove: {
+//                     particles_nb: 2
+//                 }
+//             }
+//         },
+//         retina_detect: true
+//     });
+// }
+
+$("#tsparticles")
+    .particles()
+    .init({
+        detectRetina: true,
+        fpsLimit: 60,
         interactivity: {
-            detect_on: "canvas",
+            detectsOn: "canvas",
             events: {
-                onhover: {
+                onClick: {
+                    enable: false,
+                    mode: "push"
+                },
+                onHover: {
                     enable: false,
                     mode: "bubble"
-                },
-                onclick: {
-                    enable: true,
-                    mode: "repulse"
                 },
                 resize: true
             },
             modes: {
-                grab: {
-                    distance: 400,
-                    line_linked: {
-                        opacity: 0.5
-                    }
-                },
                 bubble: {
                     distance: 400,
-                    size: 4,
-                    duration: 0.3,
+                    duration: 2,
                     opacity: 1,
+                    size: 40,
                     speed: 3
                 },
-                repulse: {
-                    distance: 200,
-                    duration: 0.4
-                },
                 push: {
-                    particles_nb: 4
-                },
-                remove: {
-                    particles_nb: 2
+                    quantity: 4
                 }
             }
         },
-        retina_detect: true
+        particles: {
+            rotate: {
+                value: 0,
+                random: true,
+                direction: "clockwise",
+                animation: {
+                    enable: true,
+                    speed: 10,
+                    sync: false
+                }
+            },
+            move: {
+                enable: true,
+                outMode: "out",
+                speed: 2
+            },
+            number: {
+                density: {
+                    enable: true,
+                    area: 2000
+                },
+                value: 40
+            },
+            opacity: {
+                value: 0.8
+            },
+            shape: {
+                type: "image",
+                options: {
+                    image: [{
+                            src: "./assets/images/leave-1.png",
+                            width: 32,
+                            height: 32,
+                            particles: {
+                                move: {
+                                    direction: "bottom"
+                                }
+                            }
+                        },
+                        {
+                            src: "./assets/images/leave-2.png",
+                            width: 32,
+                            height: 32,
+                            particles: {
+                                move: {
+                                    direction: "bottom"
+                                }
+                            }
+                        },
+                        {
+                            src: "./assets/images/leave-3.png",
+                            width: 32,
+                            height: 32,
+                            particles: {
+                                move: {
+                                    direction: "bottom"
+                                }
+                            }
+                        },
+                        {
+                            src: "./assets/images/leave-4.png",
+                            width: 32,
+                            height: 32,
+                            particles: {
+                                move: {
+                                    direction: "bottom"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            size: {
+                value: 16
+            }
+        }
     });
-}
-
-$(document).ready(async function () {
-    await loadFull(tsParticles);
-
-    // Initialize particles with options loaded from JSON file
-    $("#tsparticles")
-        .particles()
-        .ajax("particles.json", function (container) {
-            // container is the particles container where you can play/pause or stop/start.
-            // the container is already started, you don't need to start it manually.
-        });
-});
