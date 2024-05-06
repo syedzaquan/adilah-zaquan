@@ -256,32 +256,6 @@ $("#tsparticles")
     .init({
         detectRetina: true,
         fpsLimit: 60,
-        interactivity: {
-            detectsOn: "canvas",
-            events: {
-                onClick: {
-                    enable: false,
-                    mode: "push"
-                },
-                onHover: {
-                    enable: false,
-                    mode: "bubble"
-                },
-                resize: true
-            },
-            modes: {
-                bubble: {
-                    distance: 400,
-                    duration: 2,
-                    opacity: 1,
-                    size: 40,
-                    speed: 3
-                },
-                push: {
-                    quantity: 4
-                }
-            }
-        },
         particles: {
             rotate: {
                 value: 0,
