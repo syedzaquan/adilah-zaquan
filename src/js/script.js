@@ -260,11 +260,11 @@ $("#tsparticles")
             detectsOn: "canvas",
             events: {
                 onClick: {
-                    enable: false,
+                    enable: true,
                     mode: "push"
                 },
                 onHover: {
-                    enable: false,
+                    enable: true,
                     mode: "bubble"
                 },
                 resize: true
@@ -285,11 +285,11 @@ $("#tsparticles")
         particles: {
             rotate: {
                 value: 0,
-                random: true,
+                random: false,
                 direction: "clockwise",
                 animation: {
-                    enable: true,
-                    speed: 10,
+                    enable: false,
+                    speed: 5,
                     sync: false
                 }
             },
@@ -301,9 +301,9 @@ $("#tsparticles")
             number: {
                 density: {
                     enable: true,
-                    area: 2000
+                    area: 800
                 },
-                value: 40
+                value: 80
             },
             opacity: {
                 value: 0.8
