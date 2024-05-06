@@ -111,26 +111,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Footer nav hide/show
-    var footerNav = document.querySelector('.footer-nav');
-    var mainSection = document.getElementById('main');
+    const mainSection = document.getElementById('main');
+    const footerNav = document.querySelector('.footer-nav');
 
-    var options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 1
-    };
-
-    function handleIntersect(entries, observer) {
-        entries.forEach(function (entry) {
-            if (!entry.isIntersecting) {
-                footerNav.classList.add('show');
-            } else {
+    function handleIntersection(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
                 footerNav.classList.remove('show');
+            } else {
+                footerNav.classList.add('show');
             }
         });
     }
 
-    var observer = new IntersectionObserver(handleIntersect, options);
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
 
     observer.observe(mainSection);
 });
