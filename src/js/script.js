@@ -86,21 +86,20 @@ document.addEventListener("DOMContentLoaded", function () {
             disable: false
         });
 
-        // initParticles();
-
-        setTimeout(function () {
-            if (audio.paused) {
-                audio.play();
-                isPlaying = true;
-            } else {
-                audio.pause();
-                audio.currentTime = 0;
-                isPlaying = false;
-            }
-        }, 1000);
-
-
+        // Initiate audio playback in response to user interaction
+        playAudio();
     });
+
+    function playAudio() {
+        if (audio.paused) {
+            audio.play();
+            isPlaying = true;
+        } else {
+            audio.pause();
+            audio.currentTime = 0;
+            isPlaying = false;
+        }
+    }
 
     document.addEventListener("visibilitychange", function () {
         if (document.visibilityState === 'hidden' && isPlaying) {
