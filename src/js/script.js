@@ -26,6 +26,7 @@ var x = setInterval(function () {
 document.addEventListener("DOMContentLoaded", function () {
     const navItems = document.querySelectorAll('.nav-item a');
     const overlay = document.getElementById('overlay');
+    const closeButtons = document.querySelectorAll('.close-btn');
 
     navItems.forEach(item => {
         item.addEventListener('click', function (event) {
@@ -43,6 +44,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const popup = this.closest('.popup');
+            if (popup) {
+                popup.classList.remove('show');
+                overlay.classList.remove('show');
+            }
+        });
+    });
+
+    overlay.addEventListener('click', function () {
+        closeAllPopups();
     });
 
     function closeAllPopups() {
