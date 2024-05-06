@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navItems = document.querySelectorAll('.nav-item a');
     const overlay = document.getElementById('overlay');
     const closeButtons = document.querySelectorAll('.close-btn');
+    const body = document.querySelector('body');
 
     navItems.forEach(item => {
         item.addEventListener('click', function (event) {
@@ -37,10 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (popup.classList.contains('show')) {
                     popup.classList.remove('show');
                     overlay.classList.remove('show');
+                    body.classList.remove('no-scroll');
                 } else {
                     closeAllPopups();
                     popup.classList.add('show');
                     overlay.classList.add('show');
+                    body.classList.add('no-scroll');
                 }
             }
         });
@@ -52,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (popup) {
                 popup.classList.remove('show');
                 overlay.classList.remove('show');
+                body.classList.remove('no-scroll');
             }
         });
     });
@@ -65,5 +69,197 @@ document.addEventListener("DOMContentLoaded", function () {
             popup.classList.remove('show');
         });
         overlay.classList.remove('show');
+        body.classList.remove('no-scroll');
     }
+
+    // Start button
+    var calligraphyName = document.querySelector(".calligraphy-name");
+    var startBtn = document.querySelector(".start-btn");
+    var audio = document.getElementById('audio');
+    var isPlaying = false;
+
+    startBtn.addEventListener("click", function () {
+        this.classList.add("hidden");
+        calligraphyName.classList.remove("splash-centered");
+        body.classList.remove('no-scroll');
+        AOS.init({
+            disable: false
+        });
+
+        initParticles();
+
+        setTimeout(function () {
+            if (audio.paused) {
+                audio.play();
+                isPlaying = true;
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+                isPlaying = false;
+            }
+        }, 1000);
+
+
+    });
+
+    document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === 'hidden' && isPlaying) {
+            audio.pause();
+        } else {
+            audio.play();
+        }
+    });
+
+    // Footer nav hide/show
+    var footerNav = document.querySelector('.footer-nav');
+    var mainSection = document.getElementById('main');
+
+    var options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1
+    };
+
+    function handleIntersect(entries, observer) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) {
+                footerNav.classList.add('show');
+            } else {
+                footerNav.classList.remove('show');
+            }
+        });
+    }
+
+    var observer = new IntersectionObserver(handleIntersect, options);
+
+    observer.observe(mainSection);
+});
+
+function initParticles() {
+    particlesJS("particles-js", {
+        particles: {
+            number: {
+                value: 52,
+                density: {
+                    enable: true,
+                    value_area: 631.3280775270874
+                }
+            },
+            color: {
+                value: "#000"
+            },
+            shape: {
+                type: "image",
+                stroke: {
+                    width: 0,
+                    color: "#000000"
+                },
+                polygon: {
+                    nb_sides: 5
+                },
+                image: {
+                    src: "https://png.pngtree.com/png-clipart/20230428/ourmid/pngtree-free-vector-big-green-leaf-of-tropical-monstera-plant-isolated-on-png-image_6743001.png",
+                    width: 100,
+                    height: 100
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: true,
+                anim: {
+                    enable: false,
+                    speed: 1,
+                    opacity_min: 0.1,
+                    sync: false
+                }
+            },
+            size: {
+                value: 5,
+                random: true,
+                anim: {
+                    enable: false,
+                    speed: 40,
+                    size_min: 0.1,
+                    sync: false
+                }
+            },
+            line_linked: {
+                enable: false,
+                distance: 500,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 2
+            },
+            move: {
+                enable: true,
+                speed: 1.5,
+                direction: "bottom",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+            },
+            rotate: {
+                random: true,
+                speed: 0.5
+            }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: {
+                    enable: false,
+                    mode: "bubble"
+                },
+                onclick: {
+                    enable: true,
+                    mode: "repulse"
+                },
+                resize: true
+            },
+            modes: {
+                grab: {
+                    distance: 400,
+                    line_linked: {
+                        opacity: 0.5
+                    }
+                },
+                bubble: {
+                    distance: 400,
+                    size: 4,
+                    duration: 0.3,
+                    opacity: 1,
+                    speed: 3
+                },
+                repulse: {
+                    distance: 200,
+                    duration: 0.4
+                },
+                push: {
+                    particles_nb: 4
+                },
+                remove: {
+                    particles_nb: 2
+                }
+            }
+        },
+        retina_detect: true
+    });
+}
+
+$(document).ready(async function () {
+    await loadFull(tsParticles);
+
+    // Initialize particles with options loaded from JSON file
+    $("#tsparticles")
+        .particles()
+        .ajax("particles.json", function (container) {
+            // container is the particles container where you can play/pause or stop/start.
+            // the container is already started, you don't need to start it manually.
+        });
 });

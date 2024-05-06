@@ -15,11 +15,14 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
-<body style="overflow-x: hidden; padding: 0 0 100px;">
+<body class="no-scroll position-relative" style="overflow-x: hidden; padding: 0 0 100px;">
 
-    <!-- <audio loop id="audio">
-        <source src="https://www.kahwinnow.com/storage/music/DU3DX3V6TwSmDSD3TR2E6BgFUDM3Rgss8etiVGUx.mp3" type="audio/mpeg">
-    </audio> -->
+    <audio loop id="audio">
+        <source src="assets/audio/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- <div id="particles-js"></div> -->
+    <div id="tsparticles" data-aos="fade-down" data-aos-duration="3000"></div>
 
     <div id="main" class="main-content">
         <div class="main-content-wrapper">
@@ -38,7 +41,8 @@
                                     <!-- <p class="calligraphy-text name adilah fade-scroll" data-aos="fade-up">Adilah</p>
                                     <p class="ampersand fade-scroll" data-aos="fade-up" style="font-size: 30px;">&</p>
                                     <p class="calligraphy-text name zaquan fade-scroll" data-aos="fade-up">Zaquan</p> -->
-                                    <img class="calligraphy-name img-fluid" data-aos="zoom-in" data-aos-easing="ease" data-aos-delay="500" data-aos-duration="1000" src="assets/images/calligraphy.png">
+                                    <img class="calligraphy-name img-fluid splash-centered" src="assets/images/calligraphy.png">
+                                    <!-- <img class="calligraphy-name img-fluid" data-aos="zoom-in" data-aos-easing="ease" data-aos-delay="500" data-aos-duration="1000" src="assets/images/calligraphy.png"> -->
                                     <!-- <hr> -->
                                     <div class="date-wrapper row fade-scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="700" data-aos-duration="1000">
                                         <div class="col-5 left">
@@ -63,6 +67,9 @@
                                         <p class="venue">Rumah Dusun</p>
                                         <p class="region">Pasir Puteh</p>
                                         <p class="state mb-0">Kelantan</p>
+                                    </div>
+                                    <div class="start-btn">
+                                        Buka
                                     </div>
                                 </div>
                             </div>
@@ -239,13 +246,17 @@
     <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js" integrity="sha512-e2WVdoOGqKU97DHH6tYamn+eAwLDpyHKqPy4uSv0aGlwDXZKGwyS27sfiIUT8gpZ88/Lr4UZpbRt93QkGRgpug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/jquery"></script>
+    
 
     <script>
         // var titleCurve = new CircleType(document.querySelector('.curve-text'))
         //     .radius(300);
         // $(titleCurve.element).fitText();
 
-        AOS.init();
+        
     </script>
 </body>
 

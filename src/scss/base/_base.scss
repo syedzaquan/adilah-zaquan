@@ -23,8 +23,47 @@ body {
   background-color: #F8F7F3;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 section {
   padding: 0 40px !important;
+}
+
+.start-btn {
+  background-color: transparent;
+  border-radius: 80px;
+  border: 2px solid #F0CA97;
+  font-weight: 600;
+
+  padding: 10px 32px !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  // position: relative;
+  z-index: 1;
+
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  &.hidden {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+#particles-js {
+  position: absolute;
+  max-width: 420px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
 }
 
 hr {
@@ -94,7 +133,7 @@ a[href^="mailto"] {
   }
 }
 
-#main {
+.main-content {
   padding: 40px;
   background-image: url("../images/tropical.webp");
   background-size: cover;
