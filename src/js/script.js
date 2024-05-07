@@ -1,3 +1,9 @@
+// Refresh page, scroll on top
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
+
+// Countdown
 var countDownDate = new Date("August 9, 2024 00:00:00").getTime();
 
 var x = setInterval(function () {
