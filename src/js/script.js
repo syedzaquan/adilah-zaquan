@@ -1,7 +1,11 @@
 // Refresh page, scroll on top
-$(document).ready(function(){
+$(document).ready(function () {
     $(this).scrollTop(0);
 });
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
 
 // Countdown
 var countDownDate = new Date("August 9, 2024 00:00:00").getTime();
