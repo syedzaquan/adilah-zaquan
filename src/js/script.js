@@ -1,12 +1,19 @@
 // Refresh page, scroll on top
-$(document).ready(function () {
-    setTimeout(function () {
-        $(this).scrollTop(0);
-    }, 1000);
-});
+// $(document).ready(function () {
+//     setTimeout(function () {
+//         $(this).scrollTop(0);
+//     }, 1000);
+// });
 
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
+// window.onbeforeunload = function () {
+//     window.scrollTo(0, 0);
+// }
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+} else {
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
 }
 
 // Countdown
