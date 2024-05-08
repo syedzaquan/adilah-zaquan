@@ -1,6 +1,8 @@
 // Refresh page, scroll on top
 $(document).ready(function () {
-    $(this).scrollTop(0);
+    setTimeout(function () {
+        $(this).scrollTop(0);
+    }, 1000);
 });
 
 window.onbeforeunload = function () {
