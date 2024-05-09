@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Start button
     var calligraphyName = document.querySelector(".calligraphy-name");
+    var welcomeMsg = document.querySelectorAll(".welcome-message");
     var startBtn = document.querySelector(".start-btn");
     var audio = document.getElementById('audio');
     var isPlaying = false;
@@ -103,6 +104,10 @@ document.addEventListener("DOMContentLoaded", function () {
         body.classList.remove('no-scroll');
         AOS.init({
             disable: false
+        });
+
+        welcomeMsg.forEach(function (message) {
+            message.classList.add('hidden');
         });
 
         // Initiate audio playback in response to user interaction
@@ -291,15 +296,40 @@ $("#tsparticles")
                 outMode: "out",
                 speed: 2
             },
+            rotate: {
+                value: {
+                    min: 0,
+                    max: 360
+                },
+                direction: "random",
+                move: true,
+                animation: {
+                    enable: true,
+                    speed: 5
+                }
+            },
+            tilt: {
+                direction: "random",
+                enable: true,
+                move: true,
+                value: {
+                    min: 0,
+                    max: 360
+                },
+                animation: {
+                    enable: true,
+                    speed: 40
+                }
+            },
             number: {
                 density: {
                     enable: true,
-                    area: 800
+                    area: 1500
                 },
-                value: 80
+                value: 50
             },
             opacity: {
-                value: 0.8
+                value: 0.5
             },
             shape: {
                 type: "image",
