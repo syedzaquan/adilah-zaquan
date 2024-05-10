@@ -28,4 +28,20 @@
             }
         }
     }
+
+    .countdown-before {
+        display: block;
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    .countdown-during {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
 }
