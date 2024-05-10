@@ -21,6 +21,9 @@ body {
   background-repeat: repeat;
   color: #395b76;
   background-color: #F8F7F3;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .no-scroll {
@@ -44,6 +47,8 @@ section {
   display: inline-block;
   // position: relative;
   z-index: 999;
+
+  cursor: pointer;
 
   position: absolute;
   left: 50%;
