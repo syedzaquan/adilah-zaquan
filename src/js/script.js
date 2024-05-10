@@ -104,7 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var calligraphyName = document.querySelector(".calligraphy-name");
     var welcomeMsg = document.querySelectorAll(".welcome-message");
     var startBtn = document.querySelector(".start-btn");
-    var audio = document.getElementById('audio');
+    var scrollDown = document.querySelector(".scroll-down");
+    var audio = document.querySelector('#audio');
     var isPlaying = false;
 
     startBtn.addEventListener("click", function () {
@@ -118,6 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
         welcomeMsg.forEach(function (message) {
             message.classList.add('hidden');
         });
+
+        scrollDown.classList.add('show');
 
         // Initiate audio playback in response to user interaction
         playAudio();
@@ -139,6 +142,14 @@ document.addEventListener("DOMContentLoaded", function () {
             audio.pause();
         } else {
             audio.play();
+        }
+    });
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) { // Adjust this value to the desired scroll position
+            scrollDown.classList.remove('show');
+        } else {
+            scrollDown.classList.add('show');
         }
     });
 
