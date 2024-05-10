@@ -16,14 +16,14 @@ if (history.scrollRestoration) {
     }
 }
 
-function resetHeight() {
-    // reset the body height to that of the inner browser
-    document.querySelector(".main-content").style.height = window.innerHeight + "px";
-}
-// reset the height whenever the window's resized
-window.addEventListener("resize", resetHeight);
-// called to initially set the height.
-resetHeight();
+// function resetHeight() {
+//     // reset the body height to that of the inner browser
+//     document.querySelector(".main-content").style.height = window.innerHeight + "px";
+// }
+// // reset the height whenever the window's resized
+// window.addEventListener("resize", resetHeight);
+// // called to initially set the height.
+// resetHeight();
 
 // Countdown
 var countDownDate = new Date("August 9, 2024 00:00:00").getTime();
