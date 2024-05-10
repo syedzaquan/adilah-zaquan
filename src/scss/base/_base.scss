@@ -143,7 +143,7 @@ a[href^="mailto"] {
   background-image: url("../images/tropical.webp");
   background-size: cover;
 
-  height: 100vh;
+  // height: 90vh;
   min-height: -webkit-fill-available;
   display: flex;
   align-items: center;
@@ -257,7 +257,7 @@ a[href^="mailto"] {
   // left: 50%;
   // transform: translate3d(-50%, -50%, 0);
   background-color: rgba(#000, 0.5);
-  padding: 10px;
+  padding: 4px;
   border: 4px solid $color-alpha;
 
   &:before,
@@ -288,7 +288,7 @@ a[href^="mailto"] {
 
     &:before,
     &:after {
-      content: "•";
+      // content: "•";
       position: absolute;
       width: 14px;
       height: 14px;

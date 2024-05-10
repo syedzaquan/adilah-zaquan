@@ -16,6 +16,15 @@ if (history.scrollRestoration) {
     }
 }
 
+function resetHeight() {
+    // reset the body height to that of the inner browser
+    document.querySelector(".main-content").style.height = window.innerHeight + "px";
+}
+// reset the height whenever the window's resized
+window.addEventListener("resize", resetHeight);
+// called to initially set the height.
+resetHeight();
+
 // Countdown
 var countDownDate = new Date("August 9, 2024 00:00:00").getTime();
 
@@ -329,13 +338,13 @@ $("#tsparticles")
                 value: 50
             },
             opacity: {
-                value: 0.5
+                value: 0.3
             },
             shape: {
                 type: "image",
                 options: {
                     image: [{
-                            src: "./assets/images/leave-1.png",
+                            src: "./assets/images/leave-1-blue.png",
                             width: 32,
                             height: 32,
                             particles: {
@@ -345,7 +354,7 @@ $("#tsparticles")
                             }
                         },
                         {
-                            src: "./assets/images/leave-2.png",
+                            src: "./assets/images/leave-2-blue.png",
                             width: 32,
                             height: 32,
                             particles: {
@@ -355,7 +364,7 @@ $("#tsparticles")
                             }
                         },
                         {
-                            src: "./assets/images/leave-3.png",
+                            src: "./assets/images/leave-3-blue.png",
                             width: 32,
                             height: 32,
                             particles: {
@@ -365,7 +374,7 @@ $("#tsparticles")
                             }
                         },
                         {
-                            src: "./assets/images/leave-4.png",
+                            src: "./assets/images/leave-4-blue.png",
                             width: 32,
                             height: 32,
                             particles: {
