@@ -111,6 +111,12 @@
                     top: 20%;
                     text-transform: none;
                     font-style: italic;
+                    transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+
+                    &.hidden {
+                        top: 0;
+                        transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+                    }
                 }
 
                 .you-are-invited {
