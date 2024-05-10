@@ -20,10 +20,17 @@ body {
   background-size: 100px;
   background-repeat: repeat;
   color: #395b76;
-  background-color: #F8F7F3;
+  background-color: #fff;
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
+
+  .big-wrapper {
+    width: inherit;
+    max-width: inherit;
+    background-color: #F8F7F3;
+    padding: 0 0 100px;
+  }
 }
 
 .no-scroll {
@@ -65,8 +72,8 @@ section {
 
 #tsparticles, #particles-js {
   position: fixed;
-  max-width: 420px;
-  width: 100%;
+  max-width: inherit;
+  width: inherit;
   height: 100%;
   pointer-events: none;
   z-index: 0;
