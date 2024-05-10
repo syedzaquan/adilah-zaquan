@@ -112,6 +112,15 @@
         }
 
         .location-popup {
+
+            iframe {
+                height: 300px;
+
+                @media (max-width: 380px) {
+                    height: 200px;
+                }
+            }
+        
             .location-waze-gmap {
                 align-items: center;
                 display: flex;
@@ -120,6 +129,10 @@
                 padding: 20px;
                 color: #395b76;
                 flex-direction: column;
+
+                @media (max-width: 380px) {
+                    font-size: 14px;
+                }
 
                 .waze,
                 .google-map {
@@ -139,6 +152,10 @@
 
                     &:not(:last-child) {
                         margin-bottom: 20px;
+
+                        @media (max-width: 380px) {
+                            margin-bottom: 10px;
+                        }
                     }
 
                     span {
@@ -178,6 +195,10 @@
 #lokasi {
     &.show {
         max-height: 700px;
+
+        @media (max-width: 380px) {
+            max-height: 565px;
+        }
     }
 }
 

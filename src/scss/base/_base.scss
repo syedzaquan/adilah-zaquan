@@ -25,6 +25,10 @@ body {
   max-width: 480px;
   margin: 0 auto;
 
+  @media (max-width: 380px) {
+    font-size: 14px;
+  }
+
   .big-wrapper {
     width: inherit;
     max-width: inherit;
