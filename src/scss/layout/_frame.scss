@@ -96,7 +96,7 @@
                 }
 
                 .save-the-date {
-                    top: 15%;
+                    top: 10%;
                     font-size: 20px;
                     line-height: 30px;
                     transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
@@ -108,9 +108,12 @@
                 }
 
                 .for-the-wedding {
-                    top: 20%;
+                    font-family: GraciaASW03-No55,Arial,Helvetica,sans-serif;
+                    font-size: 30px;
+                    line-height: 30px;
+                    top: 15%;
                     text-transform: none;
-                    font-style: italic;
+                    // font-style: italic;
                     transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
 
                     &.hidden {
