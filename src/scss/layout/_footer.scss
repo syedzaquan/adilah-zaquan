@@ -82,6 +82,10 @@
             line-height: 27px;
             text-transform: uppercase;
             margin-bottom: 30px;
+
+            @media (max-width: 380px) {
+                margin-bottom: 15px;
+            }
         }
 
         .contact-popup {
@@ -120,7 +124,7 @@
                     height: 200px;
                 }
             }
-        
+
             .location-waze-gmap {
                 align-items: center;
                 display: flex;
@@ -165,7 +169,56 @@
             }
         }
 
+        .pemberian-popup {
+            .bank-account {
+                margin-bottom: 20px;
+                font-size: 18px;
 
+                @media (max-width: 380px) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .label {
+                margin-bottom: 5px;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+
+                @media (max-width: 380px) {
+                    width: 40%;
+                }
+            }
+
+            .input-box {
+                background-color: #f8f7f3;
+                color: #395b76;
+                padding: 8px 40px;
+                margin-bottom: 20px;
+                border-radius: 6px;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+
+            .save-qr {
+                background-color: transparent;
+                border: 2px solid #b78846;
+                border-radius: 80px;
+                color: #f8f7f3;
+                display: block;
+                font-weight: 500;
+                padding: 10px !important;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 60%;
+                margin: 20px auto 0;
+            }
+        }
 
 
     }
@@ -174,7 +227,8 @@
 }
 
 #hubungi,
-#lokasi {
+#lokasi,
+#pemberian {
     max-height: 0px;
     overflow: hidden;
     opacity: 0;
@@ -198,6 +252,16 @@
 
         @media (max-width: 380px) {
             max-height: 565px;
+        }
+    }
+}
+
+#pemberian {
+    &.show {
+        max-height: 720px;
+
+        @media (max-width: 380px) {
+            max-height: 600px;
         }
     }
 }

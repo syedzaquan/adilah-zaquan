@@ -187,6 +187,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver(handleIntersection, options);
 
     observer.observe(mainSection);
+
+    // Save full QR
+    var saveBtn = document.querySelector('.save-qr');
+    saveBtn.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevents default behavior of the link
+        var imageUrl = 'assets/images/full-qr.png';
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', imageUrl, true);
+        xhr.responseType = 'blob';
+        xhr.onload = function () {
+            var urlCreator = window.URL || window.webkitURL;
+            var imageUrl = urlCreator.createObjectURL(this.response);
+            var link = document.createElement('a');
+            link.href = imageUrl;
+            link.download = 'qr_code.png';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+        xhr.send();
+    });
 });
 
 // function initParticles() {
