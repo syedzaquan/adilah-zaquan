@@ -199,15 +199,39 @@ document.addEventListener("DOMContentLoaded", function () {
         xhr.onload = function () {
             var urlCreator = window.URL || window.webkitURL;
             var imageUrl = urlCreator.createObjectURL(this.response);
-            var link = document.createElement('a');
-            link.href = imageUrl;
-            link.download = 'qr_code.png';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+
+            // Check if navigator.share is available
+            if (navigator.share) {
+                // If supported, share the image
+                navigator.share({
+                        files: [new File([this.response], 'qr_code.png', {
+                            type: 'image/png'
+                        })],
+                        title: 'QR Code',
+                        text: 'Downloaded QR Code'
+                    })
+                    .catch(error => {
+                        console.error('Error sharing:', error);
+                        // If sharing fails, provide a fallback for downloading
+                        downloadImage(imageUrl);
+                    });
+            } else {
+                // If navigator.share is not available, provide a fallback for downloading
+                downloadImage(imageUrl);
+            }
         };
         xhr.send();
     });
+
+    // Function to handle downloading the image
+    function downloadImage(imageUrl) {
+        var link = document.createElement('a');
+        link.href = imageUrl;
+        link.download = 'qr_code.png';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
 });
 
 // function initParticles() {
