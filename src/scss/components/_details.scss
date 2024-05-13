@@ -64,12 +64,12 @@
                 flex-direction: row;
 
                 .timeline-item {
-                    width: 50%;
+                    // width: 33.33%;
                     text-align: left;
                     position: relative;
 
                     i {
-                        color: #b78846;
+                        color: #e0b578;
                         font-size: 10px;
                         vertical-align: middle;
                         line-height: 1px;
@@ -83,23 +83,33 @@
                     }
                 }
 
-                .itinerary-time {
-                    // width: 30%;
+                .itinerary-line {
+                    width: 10%;
 
                     &:after {
                         background-color: #b78846;
                         content: "";
                         height: 1px;
-                        right: 10px;
                         position: absolute;
+                        right: 50%;
                         top: 50%;
-                        width: calc(100% - 40px);
+                        width: 50%;
+                        transform: translate(-50%, -50%);
                     }
                 }
 
-                // .itinerary-event {
-                //     width: 70%;
+                // .itinerary-time, .itinerary-event {
+                //     width: 45%;
                 // }
+
+                .itinerary-time {
+                    width: 35%;
+
+                }
+
+                .itinerary-event {
+                    width: 55%;
+                }
             }
 
 
