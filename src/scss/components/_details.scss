@@ -7,7 +7,9 @@
         // font-family: Gotham, Arial, Arial, Helvetica, sans-serif;
     }
 
-    .salam, .parents, .groom-bride {
+    .salam,
+    .parents,
+    .groom-bride {
         margin-bottom: 45px;
     }
 
@@ -49,6 +51,58 @@
 
         p:last-child {
             margin-bottom: 0;
+        }
+
+        .timeline-itinerary {
+            max-width: 280px;
+            width: 100%;
+            margin: 0 auto;
+
+            .timeline-item-wrapper {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+
+                .timeline-item {
+                    width: 50%;
+                    text-align: left;
+                    position: relative;
+
+                    i {
+                        color: #b78846;
+                        font-size: 10px;
+                        vertical-align: middle;
+                        line-height: 1px;
+                    }
+
+                    span {
+                        background-color: #F8F7F3;
+                        position: relative;
+                        z-index: 10;
+                        padding: 0 10px 0 0;
+                    }
+                }
+
+                .itinerary-time {
+                    // width: 30%;
+
+                    &:after {
+                        background-color: #b78846;
+                        content: "";
+                        height: 1px;
+                        right: 10px;
+                        position: absolute;
+                        top: 50%;
+                        width: calc(100% - 40px);
+                    }
+                }
+
+                // .itinerary-event {
+                //     width: 70%;
+                // }
+            }
+
+
         }
     }
 }

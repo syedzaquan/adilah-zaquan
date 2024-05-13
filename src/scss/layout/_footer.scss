@@ -42,6 +42,20 @@
                     font-size: 12px;
                 }
             }
+
+            .ig-filter {
+                .footer-icons {
+                    i {
+                        &:last-child {
+                            font-size: 10px;
+                            vertical-align: super;
+                            position: relative;
+                            left: -6px;
+                            top: -6px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -49,7 +63,6 @@
 .popup {
     position: fixed;
     bottom: 0;
-    width: 100%;
     background-color: #395b76;
     color: #F8F7F3;
     border-top-left-radius: 20px;
@@ -57,6 +70,8 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    width: inherit;
+    max-width: inherit;
     z-index: 2;
 
     .popup-wrapper {
@@ -220,7 +235,25 @@
             }
         }
 
-
+        .igfilter-popup {
+            p {
+                margin: 0;
+            }
+            a {
+                background-color: transparent;
+                border: 2px solid #b78846;
+                border-radius: 80px;
+                color: #f8f7f3;
+                display: block;
+                font-weight: 500;
+                margin: 5px auto 0;
+                padding: 10px !important;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 60%;
+            }
+        }
     }
 
 
@@ -228,7 +261,8 @@
 
 #hubungi,
 #lokasi,
-#pemberian {
+#pemberian,
+#igfilter {
     max-height: 0px;
     overflow: hidden;
     opacity: 0;
@@ -263,6 +297,12 @@
         @media (max-width: 380px) {
             max-height: 600px;
         }
+    }
+}
+
+#igfilter {
+    &.show {
+        max-height: 274px;
     }
 }
 
