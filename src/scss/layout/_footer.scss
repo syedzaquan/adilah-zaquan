@@ -184,61 +184,11 @@
             }
         }
 
-        .pemberian-popup {
-            .bank-account {
-                margin-bottom: 20px;
-                font-size: 18px;
-
-                @media (max-width: 380px) {
-                    margin-bottom: 10px;
-                }
-            }
-
-            .label {
-                margin-bottom: 5px;
-            }
-
-            img {
-                display: block;
-                margin: 0 auto;
-
-                @media (max-width: 380px) {
-                    width: 40%;
-                }
-            }
-
-            .input-box {
-                background-color: #f8f7f3;
-                color: #395b76;
-                padding: 8px 40px;
-                margin-bottom: 20px;
-                border-radius: 6px;
-
-                p {
-                    margin-bottom: 0;
-                }
-            }
-
-            .save-qr {
-                background-color: transparent;
-                border: 2px solid #b78846;
-                border-radius: 80px;
-                color: #f8f7f3;
-                display: block;
-                font-weight: 500;
-                padding: 10px !important;
-                text-align: center;
-                text-decoration: none;
-                text-transform: uppercase;
-                width: 60%;
-                margin: 20px auto 0;
-            }
-        }
-
         .igfilter-popup {
             p {
                 margin: 0;
             }
+
             a {
                 background-color: transparent;
                 border: 2px solid #b78846;
@@ -255,9 +205,151 @@
             }
         }
     }
+}
 
+#pemberian {
+    .kiriman-accordion {
+        background-color: transparent;
+
+        .accordion-item {
+            background-color: transparent;
+
+            .accordion-header {
+
+                button {
+                    border: 1px solid #f0ca97;
+                    padding: 12px 26px;
+                    border-radius: 60px;
+                    margin-bottom: 15px;
+
+                    @media (max-width: 380px) {
+                        padding: 10px 26px;
+                    }
+
+                    &:focus {
+                        outline: 0;
+                        border: 1px solid #f0ca97;
+                        box-shadow: none;
+                    }
+
+                    &:not(.collapsed) {
+                        background-color: #2b455b;
+                        border: 1px solid #f0ca97;
+
+                        &:after {
+                            transform: rotate(180deg);
+                            transition: all 1s cubic-bezier(0.76, 0, 0.24, 1);
+                        }
+                    }
+
+                    &:after {
+                        content: '\f078';
+                        font-family: "Font Awesome 6 Pro";
+                        display: inline-block;
+                        padding-right: 3px;
+                        vertical-align: middle;
+                        font-weight: 300;
+                        transition: all 1s cubic-bezier(0.76, 0, 0.24, 1);
+                    }
+                }
+            }
+
+            .accordion-body {
+                .pemberian-popup {
+                    .bank-account {
+                        margin-bottom: 5px;
+                        font-size: 18px;
+                        font-weight: 600;
+
+                        @media (max-width: 380px) {
+                            margin-bottom: 5px;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .label {
+                        margin-bottom: 5px;
+                    }
+
+                    img {
+                        display: block;
+                        margin: 10px auto;
+                        width: 45%;
+
+                        @media (max-width: 380px) {
+                            width: 35%;
+                        }
+                    }
+
+                    .input-box {
+                        background-color: #f8f7f3;
+                        color: #395b76;
+                        padding: 8px 10px;
+                        margin-bottom: 5px;
+                        border-radius: 6px;
+
+                        @media (max-width: 380px) {
+                            padding: 4px 10px;
+                        }
+
+                        p {
+                            margin-bottom: 0;
+                            font-size: 13px;
+                        }
+                    }
+
+                    .save-qr {
+                        background-color: transparent;
+                        border: 2px solid #b78846;
+                        border-radius: 80px;
+                        color: #f8f7f3;
+                        display: block;
+                        font-weight: 500;
+                        padding: 10px !important;
+                        text-align: center;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        width: 50%;
+                        margin: 10px auto 20px;
+                        font-size: 14px;
+                    }
+                }
+
+                .hadiah-popup {
+                    .address-heading {
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                        font-weight: 600;
+
+                        @media (max-width: 380px) {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .input-box {
+                        background-color: #f8f7f3;
+                        color: #395b76;
+                        padding: 8px 10px;
+                        margin-bottom: 5px;
+                        border-radius: 6px;
+
+                        @media (max-width: 380px) {
+                            padding: 4px 10px;
+                        }
+
+                        p {
+                            margin-bottom: 0;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 
 }
+
 
 #hubungi,
 #lokasi,
@@ -292,11 +384,23 @@
 
 #pemberian {
     &.show {
-        max-height: 720px;
+        max-height: 303px;
 
         @media (max-width: 380px) {
-            max-height: 600px;
+            max-height: 288px;
         }
+    }
+
+    &.opened-wang {
+        max-height: 735px;
+
+        @media (max-width: 380px) {
+            max-height: 595px;
+        }
+    }
+
+    &.opened-hadiah {
+        max-height: 399px;
     }
 }
 

@@ -152,7 +152,7 @@
                                     <i class="fa-solid fa-circle-small"></i> <span>11:30am</span>
                                 </div>
                                 <div class="timeline-item itinerary-line">
-                                    
+
                                 </div>
                                 <div class="timeline-item itinerary-event">
                                     Ketibaan Pengantin
@@ -163,7 +163,7 @@
                                     <i class="fa-solid fa-circle-small"></i> <span>12:00pm</span>
                                 </div>
                                 <div class="timeline-item itinerary-line">
-                                    
+
                                 </div>
                                 <div class="timeline-item itinerary-event">
                                     Menjamu Selera
@@ -174,7 +174,7 @@
                                     <i class="fa-solid fa-circle-small"></i> <span>4:00pm</span>
                                 </div>
                                 <div class="timeline-item itinerary-line">
-                                    
+
                                 </div>
                                 <div class="timeline-item itinerary-event">
                                     Majlis Tamat
@@ -238,7 +238,7 @@
                 <li class="nav-item">
                     <a href="#" data-target="pemberian">
                         <i class="fa-light fa-money-bill"></i>
-                        <span>Pemberian</span>
+                        <span>Kiriman Wang</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -327,21 +327,52 @@
                 <div class="close-btn">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
-                <h3 class="popup-heading">Pemberian</h3>
-                <div class="pemberian-popup">
-                    <p class="bank-account">
-                        CIMB Bank
-                    </p>
-                    <p class="label">Account Name</p>
-                    <div class="input-box">
-                        <p>Syed Zarul Zaquan bin Syed Muhamad Zulkifli</p>
+                <h3 class="popup-heading">Kiriman Wang/Hadiah</h3>
+
+                <div class="kiriman-accordion" id="accordionKiriman">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wangAccordion" aria-expanded="true" aria-controls="wangAccordion">
+                                Kiriman Wang
+                            </button>
+                        </h2>
+                        <div id="wangAccordion" class="accordion-collapse collapse" data-bs-parent="#accordionKiriman">
+                            <div class="accordion-body">
+                                <div class="pemberian-popup">
+                                    <p class="bank-account">
+                                        CIMB Bank
+                                    </p>
+                                    <p class="label">Account Name</p>
+                                    <div class="input-box">
+                                        <p>Syed Zarul Zaquan bin Syed Muhamad Zulkifli</p>
+                                    </div>
+                                    <p class="label">Account Number</p>
+                                    <div class="input-box">
+                                        <p>7619424547</p>
+                                    </div>
+                                    <img src="assets/images/qr-code.png" class="img-fluid">
+                                    <a href="#" class="save-qr">Simpan QR <i class="fa-regular fa-arrow-down-to-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="label">Account Number</p>
-                    <div class="input-box">
-                        <p>7619424547</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hadiahAccordion" aria-expanded="false" aria-controls="hadiahAccordion">
+                                Kiriman Hadiah
+                            </button>
+                        </h2>
+                        <div id="hadiahAccordion" class="accordion-collapse collapse" data-bs-parent="#accordionKiriman">
+                            <div class="accordion-body">
+                                <div class="hadiah-popup">
+                                    <p class="address-heading">Alamat kiriman hadiah</p>
+                                    <div class="address input-box">
+                                        <p>Jalan 123, Lorong ABC, Kampung, 12345, Kuala Lumpur, Malaysia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <img src="assets/images/qr-code.png" class="img-fluid">
-                    <a href="#" class="save-qr">Simpan QR <i class="fa-regular fa-arrow-down-to-line"></i></a>
                 </div>
             </div>
         </div>

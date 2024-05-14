@@ -93,8 +93,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const popup = this.closest('.popup');
             if (popup) {
                 popup.classList.remove('show');
+                popup.classList.remove('opened-wang');
+                popup.classList.remove('opened-hadiah');
                 overlay.classList.remove('show');
                 body.classList.remove('no-scroll');
+                $('.collapse').collapse('hide');
             }
         });
     });
@@ -106,10 +109,43 @@ document.addEventListener("DOMContentLoaded", function () {
     function closeAllPopups() {
         document.querySelectorAll('.popup').forEach(popup => {
             popup.classList.remove('show');
+            popup.classList.remove('opened-wang');
+            popup.classList.remove('opened-hadiah');
+            $('.collapse').collapse('hide');
         });
         overlay.classList.remove('show');
         body.classList.remove('no-scroll');
     }
+
+    $('#accordionKiriman').on('show.bs.collapse', function (event) {
+        if (event.target.id === 'wangAccordion') {
+            $('#pemberian').addClass('opened-wang');
+        }
+    });
+
+    $('#accordionKiriman').on('hide.bs.collapse', function (event) {
+        if (event.target.id === 'wangAccordion') {
+            $('#pemberian').removeClass('opened-wang');
+        }
+    });
+
+    $('#accordionKiriman').on('show.bs.collapse', function (event) {
+        if (event.target.id === 'hadiahAccordion') {
+            $('#pemberian').addClass('opened-hadiah');
+        }
+    });
+
+    $('#accordionKiriman').on('hide.bs.collapse', function (event) {
+        if (event.target.id === 'hadiahAccordion') {
+            $('#pemberian').removeClass('opened-hadiah');
+        }
+    });
+
+    // $('#accordionKiriman').on('shown.bs.collapse', function(event) {
+    //     if (event.target.id !== 'wangAccordion' && $('#wangAccordion').hasClass('show')) {
+    //         $('#pemberian').addClass('opened');
+    //     }
+    // });
 
     // Start button
     var calligraphyName = document.querySelector(".calligraphy-name");
