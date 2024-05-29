@@ -76,19 +76,19 @@
 
     .popup-wrapper {
         width: 100%;
-        padding: 40px 20px 85px;
+        padding: 23px 20px 85px;
 
         .close-btn {
             background-color: #f0ca97;
             border-radius: 60px;
             color: #395b76;
             cursor: pointer;
-            font-size: 20px;
-            padding: 0px 7px;
+            font-size: 17px;
+            line-height: 23px;
+            padding: 0 5px;
             position: absolute;
-            right: 15px;
+            right: 16px;
             top: 20px;
-            line-height: 30px;
         }
 
         .popup-heading {
@@ -96,7 +96,7 @@
             font-weight: 600;
             line-height: 27px;
             text-transform: uppercase;
-            margin-bottom: 30px;
+            margin-bottom: 23px;
 
             @media (max-width: 380px) {
                 margin-bottom: 15px;
@@ -156,7 +156,7 @@
                 .waze,
                 .google-map {
                     background-color: transparent;
-                    border: 2px solid #b78846;
+                    border: 1px solid #f0ca97;
                     border-radius: 80px;
                     color: #f8f7f3;
                     display: block;
@@ -374,31 +374,35 @@
 
 #hubungi {
     &.show {
-        max-height: 320px;
+        max-height: 290px;
+
+        @media (max-width: 380px) {
+            max-height: 275px;
+        }
     }
 }
 
 #lokasi {
     &.show {
-        max-height: 700px;
+        max-height: 665px;
 
         @media (max-width: 380px) {
-            max-height: 565px;
+            max-height: 525px;
         }
     }
 }
 
 #pemberian {
     &.show {
-        max-height: 345px;
+        max-height: 310px;
 
         @media (max-width: 380px) {
-            max-height: 310px;
+            max-height: 275px;
         }
     }
 
     &.opened-wang {
-        max-height: 760px;
+        max-height: 730px;
 
         @media (max-width: 380px) {
             max-height: 625px;
@@ -412,7 +416,7 @@
 
 #igfilter {
     &.show {
-        max-height: 274px;
+        max-height: 230px;
     }
 }
 
