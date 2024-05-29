@@ -224,6 +224,8 @@
 
                     @media (max-width: 380px) {
                         padding: 10px 26px;
+                        margin-bottom: 10px;
+                        font-size: 14px;
                     }
 
                     &:focus {
@@ -312,6 +314,10 @@
                         width: 50%;
                         margin: 10px auto 20px;
                         font-size: 14px;
+
+                        @media (max-width: 380px) {
+                            line-height: 18px;
+                        }
                     }
                 }
 
@@ -384,23 +390,23 @@
 
 #pemberian {
     &.show {
-        max-height: 303px;
+        max-height: 345px;
 
         @media (max-width: 380px) {
-            max-height: 288px;
+            max-height: 310px;
         }
     }
 
     &.opened-wang {
-        max-height: 735px;
+        max-height: 760px;
 
         @media (max-width: 380px) {
-            max-height: 595px;
+            max-height: 625px;
         }
     }
 
     &.opened-hadiah {
-        max-height: 399px;
+        max-height: 440px;
     }
 }
 

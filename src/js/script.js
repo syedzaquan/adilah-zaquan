@@ -118,28 +118,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     $('#accordionKiriman').on('show.bs.collapse', function (event) {
-        if (event.target.id === 'wangAccordion') {
-            $('#pemberian').addClass('opened-wang');
+        if (event.target.id === 'wangAccordionDyls' || event.target.id === 'wangAccordionSyed') {
+            $('#pemberian').addClass('opened-wang').removeClass('opened-hadiah');
+            $('#hadiahAccordion').collapse('hide');
+        } else if (event.target.id === 'hadiahAccordion') {
+            $('#pemberian').addClass('opened-hadiah').removeClass('opened-wang');
+            $('#wangAccordionDyls').collapse('hide'); // Close wangAccordionDyls if it's open
+            $('#wangAccordionSyed').collapse('hide'); // Close wangAccordionSyed if it's open
         }
     });
-
+    
     $('#accordionKiriman').on('hide.bs.collapse', function (event) {
-        if (event.target.id === 'wangAccordion') {
-            $('#pemberian').removeClass('opened-wang');
-        }
-    });
-
-    $('#accordionKiriman').on('show.bs.collapse', function (event) {
-        if (event.target.id === 'hadiahAccordion') {
-            $('#pemberian').addClass('opened-hadiah');
-        }
-    });
-
-    $('#accordionKiriman').on('hide.bs.collapse', function (event) {
-        if (event.target.id === 'hadiahAccordion') {
+        if (event.target.id === 'wangAccordionDyls' || event.target.id === 'wangAccordionSyed') {
+            // $('#pemberian').removeClass('opened-wang');
+        } else if (event.target.id === 'hadiahAccordion') {
             $('#pemberian').removeClass('opened-hadiah');
         }
     });
+    
 
     // $('#accordionKiriman').on('shown.bs.collapse', function(event) {
     //     if (event.target.id !== 'wangAccordion' && $('#wangAccordion').hasClass('show')) {
@@ -225,25 +221,35 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(mainSection);
 
     // Save full QR
-    var saveBtn = document.querySelector('.save-qr');
-    saveBtn.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevents default behavior of the link
-        var imageUrl = 'assets/images/full-qr.png';
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', imageUrl, true);
-        xhr.responseType = 'blob';
-        xhr.onload = function () {
-            var urlCreator = window.URL || window.webkitURL;
-            var imageUrl = urlCreator.createObjectURL(this.response);
-            var link = document.createElement('a');
-            link.href = imageUrl;
-            link.download = 'qr_code.png';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        };
-        xhr.send();
+    $('.qr-dyls').on('click', function(event) {
+        event.preventDefault();
+        downloadImage('assets/images/qr-code-dyls.png', 'qr_code_dyls.png');
     });
+
+    $('.qr-syed').on('click', function(event) {
+        event.preventDefault();
+        downloadImage('assets/images/qr-code-syed.png', 'qr_code_syed.png');
+    });
+
+    function downloadImage(imageUrl, fileName) {
+        $.ajax({
+            url: imageUrl,
+            method: 'GET',
+            xhrFields: {
+                responseType: 'blob'
+            },
+            success: function(data) {
+                var urlCreator = window.URL || window.webkitURL;
+                var imageUrl = urlCreator.createObjectURL(data);
+                var link = document.createElement('a');
+                link.href = imageUrl;
+                link.download = fileName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        });
+    }
 });
 
 // function initParticles() {

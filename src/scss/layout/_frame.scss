@@ -240,12 +240,13 @@
 
         .scroll-down {
             bottom: 3%;
-            font-size: 26px;
+            font-size: 35px;
             left: 50%;
             margin-top: 20px;
             position: absolute;
             transform: translateX(-50%);
             width: auto;
+            color: rgba(57, 91, 118, 0.35);
             opacity: 0;
             animation: down 2s infinite;
             transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
