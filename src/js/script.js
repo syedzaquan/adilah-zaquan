@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Save full QR
     $('.qr-dyls').on('click', function(event) {
         event.preventDefault();
-        downloadImage('assets/images/qr-code-dyls.png', 'qr_code_dyls.png');
+        downloadImage('assets/images/qr-code-dyls.png', 'qr_code_adilah.png');
     });
 
     $('.qr-syed').on('click', function(event) {
